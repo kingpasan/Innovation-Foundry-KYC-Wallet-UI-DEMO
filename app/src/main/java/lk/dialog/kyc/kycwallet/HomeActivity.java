@@ -29,7 +29,7 @@ public class HomeActivity extends AppCompatActivity {
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, PersonActivity.class);
+                Intent intent = new Intent(HomeActivity.this, WizardActivity.class);
                 startActivity(intent);
             }
         });

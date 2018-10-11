@@ -1,2 +1,2 @@
 # KYCWallet
-Kyc personal identity wallet for android.
+Kyc personal identity wallet GUI for android.
