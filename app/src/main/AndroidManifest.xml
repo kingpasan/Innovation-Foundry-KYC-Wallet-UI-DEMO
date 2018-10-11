@@ -12,27 +12,38 @@
         <activity
             android:name=".SplashActivity"
             android:theme="@style/AppTheme.Fullscreen">
-
-        </activity>
-        <activity
-            android:name=".HomeActivity"
-            android:theme="@style/AppTheme.Fullscreen" />
-
-        <activity android:name=".PersonActivity" android:theme="@style/AppTheme.Fullscreen"></activity>
-
-        <activity android:name=".AddressActivity" android:theme="@style/AppTheme.Fullscreen"></activity>
-
-        <meta-data
-            android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" />
-
-        <activity android:name=".WizardActivity" android:theme="@style/AppTheme.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".HomeActivity"
+            android:theme="@style/AppTheme.Fullscreen" />
+        <activity
+            android:name=".PersonActivity"
+            android:theme="@style/AppTheme.Fullscreen" />
+        <activity
+            android:name=".AddressActivity"
+            android:theme="@style/AppTheme.Fullscreen" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity
+            android:name=".WizardActivity"
+            android:theme="@style/AppTheme.Fullscreen" />
+        <activity
+            android:name=".AuthSelectionActivity"
+            android:theme="@style/AppTheme.Fullscreen" />
+        <activity
+            android:name=".FingerprintConfirmActivity"
+            android:theme="@style/AppTheme.Fullscreen" />
+        <activity
+            android:name=".FingerprintScanActivity"
+            android:theme="@style/AppTheme.Fullscreen"></activity>
     </application>
 
 </manifest>

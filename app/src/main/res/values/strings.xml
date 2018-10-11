@@ -4,7 +4,7 @@
     <string name="app_description">Your Digital Identity</string>
     <string name="sign_in_button">Login In</string>
     <string name="sign_up_button">Create New KYC</string>
-    <string name="please_fill_your_corresponding_details">please fill your corresponding details</string>
+    <string name="please_fill_your_corresponding_details">Please fill your corresponding details</string>
     <string name="full_name">Full Name</string>
     <string name="nic_no">NIC no</string>
     <string name="birthday">Birthday</string>
