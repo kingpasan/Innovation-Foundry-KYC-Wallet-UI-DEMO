@@ -18,6 +18,10 @@
             android:name=".HomeActivity"
             android:theme="@style/AppTheme.Fullscreen" />
 
+        <activity android:name=".PersonActivity" android:theme="@style/AppTheme.Fullscreen"></activity>
+
+        <activity android:name=".AddressActivity" android:theme="@style/AppTheme.Fullscreen"></activity>
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

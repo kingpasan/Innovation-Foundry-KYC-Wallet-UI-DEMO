@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/postalCodeText"
+        style="@style/Widget.MaterialComponents.TextInputEditText.FilledBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="381dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/text_border"
+        android:ems="10"
+        android:hint="Postal Code"
+        android:inputType="text"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="54dp"
+        android:layout_marginEnd="40dp"
+        android:fontFamily="@font/allerta_stencil"
+        android:text="Please Fill Your Addess Details"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/streetNoText"
+        style="@style/Widget.MaterialComponents.TextInputEditText.FilledBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="121dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/text_border"
+        android:ems="10"
+        android:hint="No / Street No "
+        android:inputType="text"
+        android:textSize="13sp" />
+
+    <EditText
+        android:id="@+id/streetName1Text"
+        style="@style/Widget.MaterialComponents.TextInputEditText.FilledBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="187dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/text_border"
+        android:ems="10"
+        android:hint="Street Name  1"
+        android:inputType="text"
+        android:textSize="13sp" />
+
+    <EditText
+        android:id="@+id/streetName2Text"
+        style="@style/Widget.MaterialComponents.TextInputEditText.FilledBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/text_border"
+        android:ems="10"
+        android:hint="Street Name  2"
+        android:inputType="text"
+        android:textSize="13sp" />
+
+    <EditText
+        android:id="@+id/cityText"
+        style="@style/Widget.MaterialComponents.TextInputEditText.FilledBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="314dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/text_border"
+        android:ems="10"
+        android:hint="City"
+        android:inputType="text"
+        android:textSize="13sp" />
+
+    <Button
+        android:id="@+id/btnAddressNext"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/button_background"
+        android:drawableRight="@drawable/next_icon"
+        android:text="Next"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/btnAddressBack"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:layout_alignBottom="@+id/btnAddressNext"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="40dp"
+        android:background="@drawable/button_background"
+        android:drawableStart="@drawable/backbtn_icon"
+        android:text="Back"
+        android:textColor="@android:color/white" />
+</RelativeLayout>
