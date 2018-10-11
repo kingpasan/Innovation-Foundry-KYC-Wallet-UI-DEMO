@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class AddressActivity extends AppCompatActivity {
 
-    Button btnAddressBack;
+    Button btnAddressBack, btnAddressNext;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -18,7 +18,7 @@ public class AddressActivity extends AppCompatActivity {
 
         init();
 
-        //back to person details
+        //back to person activity
         btnAddressBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -26,9 +26,21 @@ public class AddressActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        //next to mobile number verify activity
+        btnAddressNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AddressActivity.this, NumberVerifyActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 
     private void init(){
         btnAddressBack = (Button) findViewById(R.id.btnAddressBack);
+        btnAddressNext = (Button) findViewById(R.id.btnAddressNext);
     }
 }

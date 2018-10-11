@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/phoneNumberText"
+        style="@style/Widget.MaterialComponents.TextInputEditText.FilledBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="169dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/text_border"
+        android:ems="10"
+        android:hint="Phone Number"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="40dp"
+        android:fontFamily="@font/allerta_stencil"
+        android:text="enter your phone number to verify"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:inputType="phone"/>
+
+    <Button
+        android:id="@+id/btnVerify"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/button_background"
+        android:drawableRight="@drawable/verify_icon"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:text="VERIFY"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/btnVerifyBack"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/button_background"
+        android:drawableLeft="@drawable/back_icon"
+        android:paddingStart="5dp"
+        android:text="Back"
+        android:textColor="@color/c_white" />
+</RelativeLayout>
