@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">#d32f2f</color>
+    <color name="colorPrimaryDark">#9a0007</color>
+    <color name="colorAccent">#ff6659</color>
+
+    <color name="screen_1">#f44336</color>
+    <color name="screen_2">#e91e63</color>
+    <color name="screen_3">#9c27b0</color>
+
+    <color name="c_white">#ffffff</color>
+    <color name="c_Black">#000000</color>
+
+    <color name="fingerprint_background">#95aab4</color>
+
+    <array name="dot_active">
+        <item>@color/c_Black</item>
+        <item>@color/c_Black</item>
+        <item>@color/c_Black</item>
+    </array>
+
+    <array name="dot_inactive">
+        <item>@color/c_white</item>
+        <item>@color/c_white</item>
+        <item>@color/c_white</item>
+    </array>
 </resources>
