@@ -3,7 +3,7 @@ package lk.dialog.kyc.kycwallet;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class passcodeConfirmActivity extends AppCompatActivity {
+public class PasscodeConfirmActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

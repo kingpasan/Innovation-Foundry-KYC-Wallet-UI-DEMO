@@ -11,7 +11,7 @@
     <color name="c_white">#ffffff</color>
     <color name="c_Black">#000000</color>
 
-    <color name="fingerprint_background">#95aab4</color>
+    <color name="fingerprint_background">#707070</color>
 
     <array name="dot_active">
         <item>@color/c_Black</item>

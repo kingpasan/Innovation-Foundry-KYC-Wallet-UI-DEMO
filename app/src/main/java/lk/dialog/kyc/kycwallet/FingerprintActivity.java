@@ -1,93 +1,138 @@
 package lk.dialog.kyc.kycwallet;
 
+import android.content.Context;
+import android.content.Intent;
+import android.os.Build;
+import android.os.Handler;
+import android.os.VibrationEffect;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+import android.os.Vibrator;
 import android.widget.Toast;
+import com.kevalpatel2106.fingerprintdialog.AuthenticationCallback;
+import com.kevalpatel2106.fingerprintdialog.FingerprintDialogBuilder;
+import com.kevalpatel2106.fingerprintdialog.FingerprintUtils;
 
-//import com.an.biometric.BiometricCallback;
-//import com.an.biometric.BiometricManager;
+public class FingerprintActivity extends AppCompatActivity implements AuthenticationCallback{
 
-public class FingerprintActivity extends AppCompatActivity  {
-
-    Button fingerprint_prompt;
+    private final int show_fingerprint_prompt = 500;
+    Vibrator vibrator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fingerprint);
 
-                fingerprint_prompt = (Button)findViewById(R.id.fingerprint_prompt);
-                fingerprint_prompt.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
+        vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 
-//                        new BiometricManager.BiometricBuilder(FingerprintActivity.this)
-//                                .setTitle(getString(R.string.biometric_title))
-//                                .setSubtitle(getString(R.string.biometric_subtitle))
-//                                .setDescription(getString(R.string.biometric_description))
-//                                .setNegativeButtonText(getString(R.string.biometric_negative_button_text))
-//                                .build()
-//                                .authenticate(FingerprintActivity.this);
-                    }
-                });
+        final FingerprintDialogBuilder dialogBuilder = new FingerprintDialogBuilder(FingerprintActivity.this)
+                .setTitle("Authentication Required")
+                .setSubtitle("Verify to add your Authentication to Wallet")
+                .setDescription("Place Your Finger on the Fingerprint Scanner to Verify Your Identity")
+                .setNegativeButton("CANCEL");
+
+        new Handler().postDelayed(new Runnable(){
+            @Override
+            public void run() {
+                dialogBuilder.show(getSupportFragmentManager(), callback);
+            }
+        }, show_fingerprint_prompt);
+    }
+
+    final AuthenticationCallback callback = new AuthenticationCallback() {
+        @Override
+        public void fingerprintAuthenticationNotSupported() {
+            Toast.makeText(FingerprintActivity.this,
+                    "This Device doesn't support Fingerprint Authentication. Please Use Passcode.", Toast.LENGTH_LONG).show();
+            Intent fingerprintNotAvailable = new Intent(FingerprintActivity.this, PasscodeActivity.class);
+            startActivity(fingerprintNotAvailable);
+            finish();
+        }
+
+        @Override
+        public void hasNoFingerprintEnrolled() {
+            Toast.makeText(FingerprintActivity.this,
+                    "No Fingerprints Available on the device. Please Add a new Fingerprint", Toast.LENGTH_LONG).show();
+             FingerprintUtils.openSecuritySettings(FingerprintActivity.this);
+        }
+
+        @Override
+        public void onAuthenticationError(final int errorCode, @Nullable final CharSequence errString) {
+            Toast.makeText(FingerprintActivity.this,
+                    "Authentication Error. Please Try Again.!", Toast.LENGTH_LONG).show();
+            Intent authenticationError = new Intent(FingerprintActivity.this, PasscodeActivity.class);
+            startActivity(authenticationError);
+            finish();
+        }
+
+        @Override
+        public void onAuthenticationHelp(final int helpCode, @Nullable final CharSequence helpString) {
+        }
+
+        @Override
+        public void authenticationCanceledByUser() {
+            Toast.makeText(FingerprintActivity.this,
+                    "Canceled By User.", Toast.LENGTH_LONG).show();
+            Intent authenticationCancel = new Intent(FingerprintActivity.this, PasscodeActivity.class);
+            startActivity(authenticationCancel);
+            finish();
+        }
+
+        @Override
+        public void onAuthenticationSucceeded() {
+            Toast.makeText(FingerprintActivity.this,
+                    "Authentication Successful. Next time You can use Your Fingerprint to Sign in.", Toast.LENGTH_LONG).show();
+            Intent authenticationSuccess = new Intent(FingerprintActivity.this, PasscodeActivity.class);
+            startActivity(authenticationSuccess);
+            finish();
+        }
+
+        @Override
+        public void onAuthenticationFailed() {
+        }
+    };
+
+    public void quickVibrate(){
+        // Vibrate for 500 milliseconds
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            vibrator.vibrate(VibrationEffect.createOneShot(500,VibrationEffect.DEFAULT_AMPLITUDE));
+        }else{
+            //deprecated in API 26
+            vibrator.vibrate(500);
+        }
+    }
+    @Override
+    public void fingerprintAuthenticationNotSupported() {
+    }
+
+    @Override
+    public void hasNoFingerprintEnrolled() {
 
     }
 
+    @Override
+    public void onAuthenticationError(int errorCode, @Nullable CharSequence errString) {
 
-//    @Override
-//    public void onSdkVersionNotSupported() {
-//        Toast.makeText(getApplicationContext(), getString(R.string.biometric_error_sdk_not_supported), Toast.LENGTH_LONG).show();
-//    }
-//
-//    @Override
-//    public void onBiometricAuthenticationNotSupported() {
-//        Toast.makeText(getApplicationContext(), getString(R.string.biometric_error_hardware_not_supported), Toast.LENGTH_LONG).show();
-//    }
-//
-//    @Override
-//    public void onBiometricAuthenticationNotAvailable() {
-//        Toast.makeText(getApplicationContext(), getString(R.string.biometric_error_fingerprint_not_available), Toast.LENGTH_LONG).show();
-//    }
-//
-//    @Override
-//    public void onBiometricAuthenticationPermissionNotGranted() {
-//        Toast.makeText(getApplicationContext(), getString(R.string.biometric_error_permission_not_granted), Toast.LENGTH_LONG).show();
-//    }
-//
-//    @Override
-//    public void onBiometricAuthenticationInternalError(String error) {
-//        Toast.makeText(getApplicationContext(), error, Toast.LENGTH_LONG).show();
-//    }
-//
-//    @Override
-//    public void onAuthenticationFailed() {
-////        Toast.makeText(getApplicationContext(), getString(R.string.biometric_failure), Toast.LENGTH_LONG).show();
-//    }
-//
-//    @Override
-//    public void onAuthenticationCancelled() {
-//        Toast.makeText(getApplicationContext(), getString(R.string.biometric_cancelled), Toast.LENGTH_LONG).show();
-//    }
-//
-//    @Override
-//    public void onAuthenticationSuccessful() {
-//        Toast.makeText(getApplicationContext(), getString(R.string.biometric_success), Toast.LENGTH_LONG).show();
-//    }
-//
-//    @Override
-//    public void onAuthenticationHelp(int helpCode, CharSequence helpString) {
-////        Toast.makeText(getApplicationContext(), helpString, Toast.LENGTH_LONG).show();
-//    }
-//
-//    @Override
-//    public void onAuthenticationError(int errorCode, CharSequence errString) {
-////        Toast.makeText(getApplicationContext(), errString, Toast.LENGTH_LONG).show();
-//    }
-//
-//    @Override
-//    public void onPointerCaptureChanged(boolean hasCapture) {
-//
-//    }
+    }
+
+    @Override
+    public void onAuthenticationHelp(int helpCode, @Nullable CharSequence helpString) {
+
+    }
+
+    @Override
+    public void authenticationCanceledByUser() {
+
+    }
+
+    @Override
+    public void onAuthenticationSucceeded() {
+
+    }
+
+    @Override
+    public void onAuthenticationFailed() {
+    }
+
 }
