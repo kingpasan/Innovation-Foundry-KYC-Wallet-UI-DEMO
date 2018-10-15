@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="lk.dialog.kyc.kycwallet">
+
+    <uses-sdk tools:overrideLibrary="com.kevalpatel2106.fingerprintdialog" />
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
         android:allowBackup="true"
@@ -27,8 +31,9 @@
         <activity
             android:name=".AddressActivity"
             android:theme="@style/AppTheme.Fullscreen" />
-
-        <activity android:name=".NumberVerifyActivity" android:theme="@style/AppTheme.Fullscreen"></activity>
+        <activity
+            android:name=".NumberVerifyActivity"
+            android:theme="@style/AppTheme.Fullscreen" />
 
         <meta-data
             android:name="preloaded_fonts"
@@ -45,6 +50,9 @@
             android:theme="@style/AppTheme.Fullscreen" />
         <activity
             android:name=".FingerprintScanActivity"
+            android:theme="@style/AppTheme.Fullscreen" />
+        <activity
+            android:name=".PasscodeActivity"
             android:theme="@style/AppTheme.Fullscreen"></activity>
     </application>
 
