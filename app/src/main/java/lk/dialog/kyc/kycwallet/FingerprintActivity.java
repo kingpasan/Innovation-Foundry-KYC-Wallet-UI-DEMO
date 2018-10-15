@@ -52,6 +52,7 @@ public class FingerprintActivity extends AppCompatActivity implements Authentica
 
         @Override
         public void hasNoFingerprintEnrolled() {
+            quickVibrate();
             Toast.makeText(FingerprintActivity.this,
                     "No Fingerprints Available on the device. Please Add a new Fingerprint", Toast.LENGTH_LONG).show();
              FingerprintUtils.openSecuritySettings(FingerprintActivity.this);
@@ -59,6 +60,7 @@ public class FingerprintActivity extends AppCompatActivity implements Authentica
 
         @Override
         public void onAuthenticationError(final int errorCode, @Nullable final CharSequence errString) {
+            quickVibrate();
             Toast.makeText(FingerprintActivity.this,
                     "Authentication Error. Please Try Again.!", Toast.LENGTH_LONG).show();
             Intent authenticationError = new Intent(FingerprintActivity.this, PasscodeActivity.class);
@@ -83,7 +85,7 @@ public class FingerprintActivity extends AppCompatActivity implements Authentica
         public void onAuthenticationSucceeded() {
             Toast.makeText(FingerprintActivity.this,
                     "Authentication Successful. Next time You can use Your Fingerprint to Sign in.", Toast.LENGTH_LONG).show();
-            Intent authenticationSuccess = new Intent(FingerprintActivity.this, PasscodeActivity.class);
+            Intent authenticationSuccess = new Intent(FingerprintActivity.this, FingerprintConfirmActivity.class);
             startActivity(authenticationSuccess);
             finish();
         }
@@ -101,6 +103,7 @@ public class FingerprintActivity extends AppCompatActivity implements Authentica
             //deprecated in API 26
             vibrator.vibrate(500);
         }
+
     }
     @Override
     public void fingerprintAuthenticationNotSupported() {
