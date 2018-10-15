@@ -27,7 +27,8 @@ public class AuthSelectionActivity extends AppCompatActivity {
         btnUsePasscode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(AuthSelectionActivity.this, PasscodeActivity.class);
+                startActivity(intent);
             }
         });
 
