@@ -1,6 +1,7 @@
 package lk.dialog.kyc.kycwallet;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
@@ -32,12 +33,18 @@ public class PasscodeActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onSuccess(String number) {
+            public void onSuccess(String passcode) {
                 Toast.makeText(getApplication(), "Passcode Registered Successfully.", Toast.LENGTH_SHORT).show();
+
+                SharedPreferences.Editor editor = getSharedPreferences("Registration", MODE_PRIVATE).edit();
+                editor.putString("AuthMethod", "passcode");
+                editor.putString("Passcode", passcode);
+                editor.apply();
+
                 Intent intent = new Intent(PasscodeActivity.this, PersonActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
-
     }
 }
