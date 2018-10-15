@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="272dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/dashboard_banner" />
+
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="97dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginEnd="0dp"
+        app:srcCompat="@drawable/profile_pic" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="191dp"
+        android:text="Nidura Prageeth"
+        android:textColor="@color/c_white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="216dp"
+        android:text="(Developer)"
+        android:textColor="@color/c_white" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/allerta_stencil"
+        android:text="DASHBOARD"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="327dp"
+        android:layout_below="@+id/view2"
+        android:bottomLeftRadius="20dp"
+        android:bottomRightRadius="20dp"
+        app:cardElevation="0dp">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/view2"
+            android:gravity="center">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_horizontal">
+
+                <Button
+                    android:id="@+id/button28"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_below="@+id/view2"
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/dashboard_button"
+                    android:drawableTop="@drawable/profie_icon"
+                    android:paddingTop="15dp"
+                    android:text="Profile" />
+
+                <Button
+                    android:id="@+id/button27"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_below="@+id/view2"
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/dashboard_button"
+                    android:drawableTop="@drawable/barcode_scan_icon"
+                    android:paddingTop="15dp"
+                    android:text="Scan QR" />
+
+                <Button
+                    android:id="@+id/button26"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_below="@+id/view2"
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/dashboard_button"
+                    android:drawableTop="@drawable/score_icon"
+                    android:paddingTop="15dp"
+                    android:text="score" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_horizontal">
+
+                <Button
+                    android:id="@+id/button29"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_below="@+id/view2"
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/dashboard_button"
+                    android:drawableTop="@drawable/setting_icon"
+                    android:paddingTop="15dp"
+                    android:text="settings" />
+
+                <Button
+                    android:id="@+id/button30"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_below="@+id/view2"
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/dashboard_button"
+                    android:drawableTop="@drawable/barcode_scan_icon"
+                    android:paddingTop="15dp"
+                    android:text="icon" />
+
+                <Button
+                    android:id="@+id/button31"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_below="@+id/view2"
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/dashboard_button"
+                    android:drawableTop="@drawable/barcode_scan_icon"
+                    android:paddingTop="15dp"
+                    android:text="icon" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </TableLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
