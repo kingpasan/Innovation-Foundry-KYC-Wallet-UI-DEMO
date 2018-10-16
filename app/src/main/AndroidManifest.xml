@@ -4,6 +4,7 @@
     package="lk.dialog.kyc.kycwallet">
 
     <uses-sdk tools:overrideLibrary="com.kevalpatel2106.fingerprintdialog" />
+
     <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
@@ -24,6 +25,9 @@
         </activity>
         <activity
             android:name=".HomeActivity"
+            android:theme="@style/AppTheme.Fullscreen" />
+        <activity
+            android:name=".DashBoaradActivity"
             android:theme="@style/AppTheme.Fullscreen" />
         <activity
             android:name=".PersonActivity"
@@ -55,7 +59,11 @@
             android:name=".PasscodeActivity"
             android:theme="@style/AppTheme.Fullscreen" />
         <activity android:name=".ActivitySettings" />
-        <activity android:name=".PasscodeLoginActivity"></activity>
+        <activity android:name=".PasscodeLoginActivity" />
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings" />
+        <activity android:name=".FingerprintLoginActivity"></activity>
     </application>
 
 </manifest>

@@ -25,7 +25,7 @@ public class SplashActivity extends AppCompatActivity {
 
             authMethod = prefs.getString("AuthMethod", null);
                 if(("fingerprint").equals(authMethod)){
-                     intent = new Intent(SplashActivity.this, FingerprintScanActivity.class);
+                     intent = new Intent(SplashActivity.this, FingerprintLoginActivity.class);
                 }else if(("passcode").equals(authMethod)){
                      intent = new Intent(SplashActivity.this, PasscodeActivity.class);
                 }

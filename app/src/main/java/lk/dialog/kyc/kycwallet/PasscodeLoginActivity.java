@@ -57,7 +57,5 @@ public class PasscodeLoginActivity extends AppCompatActivity {
                         finish();
                     }
                 });
-
-
     }
 }
