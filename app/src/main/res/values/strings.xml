@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">KYC Wallet</string>
+    <string name="app_name">KYC Agent</string>
     <string name="app_text">eKYC</string>
     <string name="app_description">Your Digital Identity</string>
     <string name="sign_in_button">Login In</string>

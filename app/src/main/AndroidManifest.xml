@@ -25,36 +25,17 @@
         <activity
             android:name=".HomeActivity"
             android:theme="@style/AppTheme.Fullscreen" />
-        <activity
-            android:name=".PersonActivity"
-            android:theme="@style/AppTheme.Fullscreen" />
-        <activity
-            android:name=".AddressActivity"
-            android:theme="@style/AppTheme.Fullscreen" />
-        <activity
-            android:name=".NumberVerifyActivity"
-            android:theme="@style/AppTheme.Fullscreen" />
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
         <activity
-            android:name=".WizardActivity"
-            android:theme="@style/AppTheme.Fullscreen" />
-        <activity
             android:name=".AuthSelectionActivity"
-            android:theme="@style/AppTheme.Fullscreen" />
-        <activity
-            android:name=".FingerprintConfirmActivity"
-            android:theme="@style/AppTheme.Fullscreen" />
-        <activity
-            android:name=".FingerprintScanActivity"
             android:theme="@style/AppTheme.Fullscreen" />
         <activity
             android:name=".PasscodeActivity"
             android:theme="@style/AppTheme.Fullscreen" />
-        <activity android:name=".ActivitySettings" />
         <activity android:name=".PasscodeLoginActivity"></activity>
     </application>
 

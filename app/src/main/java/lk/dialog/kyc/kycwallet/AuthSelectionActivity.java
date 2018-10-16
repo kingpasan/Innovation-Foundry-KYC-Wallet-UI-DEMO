@@ -16,14 +16,6 @@ public class AuthSelectionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_auth_selection);
         init();
 
-        btnUseFingerPrint.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent =  new Intent(AuthSelectionActivity.this, FingerprintScanActivity.class);
-                startActivity(intent);
-            }
-        });
-
         btnUsePasscode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -8,7 +8,6 @@ import android.os.Bundle;
 
 public class SplashActivity extends AppCompatActivity {
 
-    String authMethod =null;
     Intent intent;
 
     @Override
@@ -18,20 +17,8 @@ public class SplashActivity extends AppCompatActivity {
 
         Handler handler = new Handler();
 
-        SharedPreferences prefs = getSharedPreferences("Registration", MODE_PRIVATE);
-        String registrationStatus = prefs.getString("RegistrationStatus", null);
+        intent = new Intent(SplashActivity.this, HomeActivity.class);
 
-        if(registrationStatus != null && !registrationStatus.isEmpty()){
-
-            authMethod = prefs.getString("AuthMethod", null);
-                if(("fingerprint").equals(authMethod)){
-                     intent = new Intent(SplashActivity.this, FingerprintScanActivity.class);
-                }else if(("passcode").equals(authMethod)){
-                     intent = new Intent(SplashActivity.this, PasscodeActivity.class);
-                }
-        }else{
-            intent = new Intent(SplashActivity.this, HomeActivity.class);
-        }
 
         handler.postDelayed(new Runnable() {
             @Override
