@@ -1,50 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
-    android:gravity="center"
-    android:orientation="vertical"
     tools:context=".SplashActivity">
 
-    <RelativeLayout
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        app:srcCompat="@drawable/dialog_logo" />
+
+    <TextView
+        android:id="@+id/lbleKYC"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView11"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="-10dp"
+        android:fontFamily="@font/audiowide"
+        android:gravity="center"
+        android:text="@string/app_text"
+        android:textColor="@color/colorPrimary"
+        android:textSize="110sp" />
 
-        <TextView
-            android:id="@+id/lbleKYC"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="100dp"
-            android:fontFamily="@font/allerta_stencil"
-            android:gravity="center"
-            android:text="@string/app_text"
-            android:textSize="100sp" />
+    <TextView
+        android:id="@+id/lblDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/lbleKYC"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="0dp"
+        android:fontFamily="@font/arvo"
+        android:gravity="right"
+        android:text="@string/app_description"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/lblDescription"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/lbleKYC"
-            android:layout_alignParentStart="true"
-            android:layout_marginEnd="60dp"
-            android:gravity="right"
-            android:text="@string/app_description" />
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        app:srcCompat="@drawable/innovation" />
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="30dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/innovation" />
-    </RelativeLayout>
-
-</LinearLayout>
+</RelativeLayout>

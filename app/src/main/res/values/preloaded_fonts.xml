@@ -3,5 +3,7 @@
     <array name="preloaded_fonts" translatable="false">
         <item>@font/allerta_stencil</item>
         <item>@font/almendra_sc</item>
+        <item>@font/arvo</item>
+        <item>@font/audiowide</item>
     </array>
 </resources>

@@ -20,20 +20,26 @@ public class FingerprintScanActivity extends AppCompatActivity implements Authen
 
     private final int show_fingerprint_prompt = 500;
     Vibrator vibrator;
+    String type;
+    Bundle bundle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fingerprint_scan);
 
+        bundle = getIntent().getExtras();
+
+        type = bundle.getString("TYPE");
+
         Handler handler = new Handler();
 
         vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 
         final FingerprintDialogBuilder dialogBuilder = new FingerprintDialogBuilder(FingerprintScanActivity.this)
-                .setTitle("Authentication Required")
-                .setSubtitle("Verify to add your Authentication to Wallet")
-                .setDescription("Place Your Finger on the Fingerprint Scanner to Verify Your Identity")
+                .setTitle("Scan User Fingerprint")
+                .setSubtitle("Verifying Device Owner")
+                .setDescription("")
                 .setNegativeButton("CANCEL");
 
         new Handler().postDelayed(new Runnable() {
@@ -67,7 +73,7 @@ public class FingerprintScanActivity extends AppCompatActivity implements Authen
             quickVibrate();
             Toast.makeText(FingerprintScanActivity.this,
                     "Authentication Error. Please Try Again.!", Toast.LENGTH_LONG).show();
-            Intent authenticationError = new Intent(FingerprintScanActivity.this, HomeActivity.class);
+            Intent authenticationError = new Intent(FingerprintScanActivity.this, AuthSelectionActivity.class);
             startActivity(authenticationError);
             finish();
         }
@@ -78,23 +84,22 @@ public class FingerprintScanActivity extends AppCompatActivity implements Authen
 
         @Override
         public void authenticationCanceledByUser() {
-            Toast.makeText(FingerprintScanActivity.this,
-                    "Canceled By User.", Toast.LENGTH_LONG).show();
-            Intent authenticationCancel = new Intent(FingerprintScanActivity.this, HomeActivity.class);
+            Intent authenticationCancel = new Intent(FingerprintScanActivity.this, AuthSelectionActivity.class);
             startActivity(authenticationCancel);
             finish();
         }
 
         @Override
         public void onAuthenticationSucceeded() {
-            Toast.makeText(FingerprintScanActivity.this,
-                    "Authentication Successful. Next time You can use Your Fingerprint to Sign in.", Toast.LENGTH_LONG).show();
 
-            SharedPreferences.Editor editor = getSharedPreferences("Registration", MODE_PRIVATE).edit();
-            editor.putString("AuthMethod", "fingerprint");
-            editor.apply();
-
+//            SharedPreferences.Editor editor = getSharedPreferences("Registration", MODE_PRIVATE).edit();
+//            editor.putString("AuthMethod", "fingerprint");
+//            editor.apply();
             Intent authenticationSuccess = new Intent(FingerprintScanActivity.this, FingerprintConfirmActivity.class);
+            if(type.equals("1"))
+            {
+                authenticationSuccess.putExtra("TYPE", type);
+            }
             startActivity(authenticationSuccess);
             finish();
         }

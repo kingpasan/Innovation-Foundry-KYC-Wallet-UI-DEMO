@@ -5,22 +5,11 @@
     <color name="colorAccent">#ff6659</color>
     <color name="darkRed">#460105</color>
 
-    <color name="screen_1">#f44336</color>
-    <color name="screen_2">#e91e63</color>
-    <color name="screen_3">#9c27b0</color>
+    <color name="screen_1">@color/colorPrimaryDark</color>
+    <color name="screen_2">@color/colorPrimaryDark</color>
+    <color name="screen_3">@color/colorPrimaryDark</color>
 
     <color name="c_white">#ffffff</color>
     <color name="c_Black">#000000</color>
-    
-    <array name="dot_active">
-        <item>@color/c_Black</item>
-        <item>@color/c_Black</item>
-        <item>@color/c_Black</item>
-    </array>
 
-    <array name="dot_inactive">
-        <item>@color/c_white</item>
-        <item>@color/c_white</item>
-        <item>@color/c_white</item>
-    </array>
 </resources>

@@ -15,7 +15,10 @@ public class PersonActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
         setContentView(R.layout.activity_person);
+        setTitle("Personal Information");
 
         init();
 
@@ -35,5 +38,12 @@ public class PersonActivity extends AppCompatActivity {
 
     private void init(){
         btnPersonNext = (Button) findViewById(R.id.btnPersonNext);
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        Intent intent = new Intent(PersonActivity.this, AuthSelectionActivity.class);
+        startActivity(intent);
+        return true;
     }
 }

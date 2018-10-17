@@ -1,18 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        app:srcCompat="@drawable/mobile_verify" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="289dp"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView10"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="15dp"
         android:text="Mobile Number Verification"
         android:textAlignment="center" />
@@ -20,25 +30,25 @@
     <EditText
         android:id="@+id/phoneNumberText"
         style="@style/Widget.MaterialComponents.TextInputEditText.FilledBox.Dense"
-        android:layout_width="match_parent"
+        android:layout_width="351dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/textView4"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="15dp"
         android:layout_marginRight="15dp"
+        android:autofillHints=""
         android:background="@drawable/text_border"
         android:ems="10"
         android:hint="Phone Number"
-        android:inputType="text"
-        android:autofillHints="" />
+        android:inputType="text" />
 
     <TableRow
         android:layout_width="294dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/phoneNumberText"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="173dp">
+        android:layout_marginTop="50dp">
 
         <EditText
             android:id="@+id/editText10"
@@ -82,21 +92,7 @@
         android:drawableLeft="@drawable/check_btn_ico"
         android:paddingStart="5dp"
         android:paddingEnd="5dp"
-        android:text="VERIFY"
-        android:textColor="@color/colorPrimaryDark" />
-
-    <Button
-        android:id="@+id/btnVerifyBack"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="15dp"
-        android:layout_marginBottom="15dp"
-        android:background="@android:color/transparent"
-        android:drawableLeft="@drawable/back_btn_ico"
-        android:paddingStart="5dp"
-        android:text="Back"
+        android:text=" Verify Number"
         android:textColor="@color/colorPrimaryDark" />
 
 </RelativeLayout>

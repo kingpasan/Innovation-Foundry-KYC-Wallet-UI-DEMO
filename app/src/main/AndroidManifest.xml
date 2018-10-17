@@ -17,52 +17,63 @@
         <activity
             android:name=".SplashActivity"
             android:theme="@style/AppTheme.Fullscreen">
-        </activity>
-        <activity
-            android:name=".HomeActivity"
-            android:theme="@style/AppTheme.Fullscreen" />
-        <activity
-            android:name=".PersonActivity"
-            android:theme="@style/AppTheme.Fullscreen" />
-        <activity
-            android:name=".AddressActivity"
-            android:theme="@style/AppTheme.Fullscreen" />
-        <activity
-            android:name=".NumberVerifyActivity"
-            android:theme="@style/AppTheme.Fullscreen" />
-
-        <meta-data
-            android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" />
-
-        <activity
-            android:name=".WizardActivity"
-            android:theme="@style/AppTheme.Fullscreen" />
-        <activity
-            android:name=".AuthSelectionActivity"
-            android:theme="@style/AppTheme.Fullscreen" />
-        <activity
-            android:name=".FingerprintConfirmActivity"
-            android:theme="@style/AppTheme.Fullscreen" />
-        <activity
-            android:name=".FingerprintScanActivity"
-            android:theme="@style/AppTheme.Fullscreen" />
-        <activity
-            android:name=".PasscodeActivity"
-            android:theme="@style/AppTheme.Fullscreen" />
-        <activity
-            android:name=".DashBoaradActivity"
-            android:theme="@style/AppTheme.Fullscreen" />
-        <activity
-            android:name=".QRViewActivity"
-            android:theme="@style/AppTheme.Fullscreen" />
-        <activity android:name=".CertificateViewActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".HomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Fullscreen" />
+        <activity
+            android:name=".PersonActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NumberVerifyActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".WizardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Fullscreen" />
+        <activity
+            android:name=".AuthSelectionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Fullscreen" />
+        <activity
+            android:name=".FingerprintConfirmActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Fullscreen" />
+        <activity
+            android:name=".FingerprintScanActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Fullscreen" />
+        <activity
+            android:name=".PasscodeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Fullscreen" />
+        <activity
+            android:name=".DashBoaradActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Fullscreen" />
+        <activity
+            android:name=".QRViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Fullscreen" />
+        <activity
+            android:name=".CertificateViewActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".LoginActivity" />
     </application>
 
 </manifest>

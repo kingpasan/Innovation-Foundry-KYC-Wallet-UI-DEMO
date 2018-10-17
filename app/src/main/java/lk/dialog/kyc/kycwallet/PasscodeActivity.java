@@ -34,12 +34,11 @@ public class PasscodeActivity extends AppCompatActivity {
 
             @Override
             public void onSuccess(String passcode) {
-                Toast.makeText(getApplication(), "Passcode Registered Successfully.", Toast.LENGTH_SHORT).show();
 
-                SharedPreferences.Editor editor = getSharedPreferences("Registration", MODE_PRIVATE).edit();
-                editor.putString("AuthMethod", "passcode");
-                editor.putString("Passcode", passcode);
-                editor.apply();
+//                SharedPreferences.Editor editor = getSharedPreferences("Registration", MODE_PRIVATE).edit();
+//                editor.putString("AuthMethod", "passcode");
+//                editor.putString("Passcode", passcode);
+//                editor.apply();
 
                 Intent intent = new Intent(PasscodeActivity.this, PersonActivity.class);
                 startActivity(intent);

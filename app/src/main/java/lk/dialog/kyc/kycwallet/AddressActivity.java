@@ -9,23 +9,17 @@ import android.widget.Button;
 
 public class AddressActivity extends AppCompatActivity {
 
-    Button btnAddressBack, btnAddressNext;
+    Button btnAddressNext;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
         setContentView(R.layout.activity_address);
+        setTitle("Location Information");
 
         init();
-
-        //back to person activity
-        btnAddressBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(AddressActivity.this, PersonActivity.class);
-                startActivity(intent);
-            }
-        });
 
         //next to mobile number verify activity
         btnAddressNext.setOnClickListener(new View.OnClickListener() {
@@ -39,8 +33,12 @@ public class AddressActivity extends AppCompatActivity {
 
     }
 
-    private void init(){
-        btnAddressBack = (Button) findViewById(R.id.btnAddressBack);
+    private void init() {
         btnAddressNext = (Button) findViewById(R.id.btnAddressNext);
+    }
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 }

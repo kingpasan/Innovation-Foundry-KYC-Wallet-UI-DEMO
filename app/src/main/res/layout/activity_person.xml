@@ -5,31 +5,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="15dp"
-        android:fontFamily="@font/allerta_stencil"
-        android:text="@string/please_fill_your_corresponding_details"
-        android:textAlignment="center"
-        android:textSize="20sp" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        app:srcCompat="@drawable/profile" />
 
     <EditText
         android:id="@+id/fullNameText"
         style="@style/Widget.MaterialComponents.TextInputEditText.FilledBox.Dense"
-        android:layout_width="302dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView8"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="173dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="15dp"
         android:background="@drawable/text_border"
         android:ems="10"
@@ -41,13 +35,13 @@
     <EditText
         android:id="@+id/nicNoText"
         style="@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox"
-        android:layout_width="302dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/fullNameText"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="242dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp"
         android:autofillHints=""
         android:background="@drawable/text_border"
@@ -59,13 +53,13 @@
     <EditText
         android:id="@+id/dobText"
         style="@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox"
-        android:layout_width="302dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/nicNoText"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="310dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp"
         android:background="@drawable/text_border"
         android:ems="10"
@@ -74,17 +68,38 @@
         android:inputType="date"
         android:textSize="16sp" />
 
-    <Button
-        android:id="@+id/btnPersonNext"
+    <EditText
+        android:id="@+id/gender"
+        style="@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/dobText"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="37dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp"
-        android:background="@drawable/button_background"
-        android:paddingStart="5dp"
-        android:text="@string/next"
-        android:textColor="@android:color/white" />
+        android:background="@drawable/text_border"
+        android:ems="10"
+        android:hint="Gender"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btnPersonNext"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@android:color/transparent"
+        android:drawableRight="@drawable/next_btn_ico"
+        android:paddingEnd="5dp"
+        android:text="Next"
+        android:textColor="@color/colorPrimaryDark" />
+
 
 </RelativeLayout>
