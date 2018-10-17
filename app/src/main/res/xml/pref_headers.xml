@@ -18,8 +18,7 @@
         android:title="@string/pref_header_data_sync" />
 
     <header
-        android:fragment="lk.dialog.kyc.kycwallet.SettingsActivity$DataSyncPreferenceFragment"
-        android:icon="@drawable/btnlogout2"
+        android:icon="@drawable/btnlogout"
         android:title="Sign Out" />
 
 </preference-headers>
