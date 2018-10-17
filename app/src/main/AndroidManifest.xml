@@ -16,11 +16,6 @@
         <activity
             android:name=".SplashActivity"
             android:theme="@style/AppTheme.Fullscreen">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".HomeActivity"
@@ -53,10 +48,20 @@
             android:theme="@style/AppTheme.Fullscreen" />
         <activity
             android:name=".PasscodeActivity"
-            android:theme="@style/AppTheme.Fullscreen"></activity>
+            android:theme="@style/AppTheme.Fullscreen" />
         <activity
             android:name=".DashBoaradActivity"
-            android:theme="@style/AppTheme.Fullscreen"></activity>
+            android:theme="@style/AppTheme.Fullscreen" />
+        <activity
+            android:name=".QRViewActivity"
+            android:theme="@style/AppTheme.Fullscreen" />
+        <activity android:name=".CertificateViewActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".ProfileActivity"
             android:theme="@style/AppTheme.Fullscreen"></activity>
