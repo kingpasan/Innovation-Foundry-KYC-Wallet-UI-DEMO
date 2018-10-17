@@ -50,6 +50,6 @@ public class DashBoaradActivity extends AppCompatActivity {
     private void init() {
         btnProfile = (Button) findViewById(R.id.btnProfile);
         btnScore = (Button) findViewById(R.id.btnScore);
-        settings = (Button)findViewById(R.id.btn_dashboard);
+        settings = (Button)findViewById(R.id.btn_settings);
     }
 }
