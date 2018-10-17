@@ -19,7 +19,6 @@ public class HomeActivity extends AppCompatActivity {
 
         init();
 
-        //user clicks on login button
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -28,7 +27,6 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        //user clicks on create new kyc button
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

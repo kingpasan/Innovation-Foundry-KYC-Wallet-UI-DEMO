@@ -120,7 +120,10 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setupActionBar();
+        setTitle("Settings");
     }
+
+
 
     /**
      * Set up the {@link android.app.ActionBar}, if the API is available.
@@ -191,6 +194,8 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             return super.onOptionsItemSelected(item);
         }
     }
+
+
 
     /**
      * This fragment shows notification preferences only. It is used when the

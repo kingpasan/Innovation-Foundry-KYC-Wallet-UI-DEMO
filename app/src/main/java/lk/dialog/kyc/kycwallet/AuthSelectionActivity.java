@@ -20,6 +20,7 @@ public class AuthSelectionActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent =  new Intent(AuthSelectionActivity.this, FingerprintScanActivity.class);
+                intent.putExtra("TYPE", "2");
                 startActivity(intent);
             }
         });

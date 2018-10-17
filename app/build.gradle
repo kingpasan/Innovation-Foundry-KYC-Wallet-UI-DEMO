@@ -34,4 +34,5 @@ dependencies {
     api 'com.hanks:passcodeview:0.1.2'
     api 'pl.droidsonroids.gif:android-gif-drawable:1.2.+'
     implementation 'com.karumi:dexter:4.2.0'
+
 }

@@ -2,7 +2,6 @@ package lk.dialog.kyc.kycwallet;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -12,7 +11,7 @@ public class DashBoaradActivity extends AppCompatActivity {
     private Button btnProfile,btnScore,settings,showQR,showCerti;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dashboard);
 
@@ -63,7 +62,7 @@ public class DashBoaradActivity extends AppCompatActivity {
 
 
     private void init() {
-        btnProfile = (Button) findViewById(R.id.btnProfile);
+        btnProfile = (Button) findViewById(R.id.btnProfile1);
         btnScore = (Button) findViewById(R.id.btnScore);
         settings = (Button)findViewById(R.id.btn_settings);
         showQR = (Button) findViewById(R.id.gena_qr);

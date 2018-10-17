@@ -23,7 +23,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="jar:file:/E:/AndroidStudioN/Android%20Studio/plugins/android/lib/android.jar!/images/material_design_icons/action/ic_settings_black_24dp.xml" />
+                                      <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material_design_icons/social/ic_person_outline_black_24dp.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -34,8 +34,11 @@
                         <option name="values">
                           <map>
                             <entry key="color" value="9a0007" />
-                            <entry key="outputName" value="setting_icon" />
+                            <entry key="height" value="150" />
+                            <entry key="outputName" value="ic_person_outline_black_24dp" />
+                            <entry key="overrideSize" value="true" />
                             <entry key="sourceFile" value="C:\Users\my" />
+                            <entry key="width" value="150" />
                           </map>
                         </option>
                       </PersistentState>

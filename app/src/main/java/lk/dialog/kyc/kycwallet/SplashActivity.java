@@ -8,32 +8,13 @@ import android.os.Bundle;
 
 public class SplashActivity extends AppCompatActivity {
 
-//    String authMethod =null;
-//    Intent intent;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        Handler handler = new Handler();
 
-//        SharedPreferences prefs = getSharedPreferences("Registration", MODE_PRIVATE);
-//        String registrationStatus = prefs.getString("RegistrationStatus", null);
-//
-//        if(registrationStatus != null && !registrationStatus.isEmpty()){
-//
-//            authMethod = prefs.getString("AuthMethod", null);
-//                if(("fingerprint").equals(authMethod)){
-//                     intent = new Intent(SplashActivity.this, FingerprintLoginActivity.class);
-//                }else if(("passcode").equals(authMethod)){
-//                     intent = new Intent(SplashActivity.this, PasscodeActivity.class);
-//                }
-//        }else{
-//            intent = new Intent(SplashActivity.this, HomeActivity.class);
-//        }
-
-        handler.postDelayed(new Runnable() {
+        new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 Intent intent = new Intent(SplashActivity.this, HomeActivity.class);

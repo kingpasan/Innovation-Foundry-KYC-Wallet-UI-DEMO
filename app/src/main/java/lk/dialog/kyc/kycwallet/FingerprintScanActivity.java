@@ -30,7 +30,9 @@ public class FingerprintScanActivity extends AppCompatActivity implements Authen
 
         bundle = getIntent().getExtras();
 
-        type = bundle.getString("TYPE");
+        if (bundle.getString("TYPE") != null) {
+            type = bundle.getString("TYPE");
+        }
 
         Handler handler = new Handler();
 
@@ -55,7 +57,12 @@ public class FingerprintScanActivity extends AppCompatActivity implements Authen
         public void fingerprintAuthenticationNotSupported() {
             Toast.makeText(FingerprintScanActivity.this,
                     "This Device doesn't support Fingerprint Authentication. Please Use Passcode.", Toast.LENGTH_LONG).show();
-            Intent fingerprintNotAvailable = new Intent(FingerprintScanActivity.this, PasscodeActivity.class);
+            Intent fingerprintNotAvailable;
+            if (type.equals("1")) {
+                fingerprintNotAvailable = new Intent(FingerprintScanActivity.this, LoginActivity.class);
+            } else {
+                fingerprintNotAvailable = new Intent(FingerprintScanActivity.this, PasscodeActivity.class);
+            }
             startActivity(fingerprintNotAvailable);
             finish();
         }
@@ -73,7 +80,13 @@ public class FingerprintScanActivity extends AppCompatActivity implements Authen
             quickVibrate();
             Toast.makeText(FingerprintScanActivity.this,
                     "Authentication Error. Please Try Again.!", Toast.LENGTH_LONG).show();
-            Intent authenticationError = new Intent(FingerprintScanActivity.this, AuthSelectionActivity.class);
+            Intent authenticationError;
+            if (type.equals("1")) {
+                authenticationError = new Intent(FingerprintScanActivity.this, LoginActivity.class);
+            } else {
+                authenticationError = new Intent(FingerprintScanActivity.this, AuthSelectionActivity.class);
+            }
+
             startActivity(authenticationError);
             finish();
         }
@@ -96,9 +109,10 @@ public class FingerprintScanActivity extends AppCompatActivity implements Authen
 //            editor.putString("AuthMethod", "fingerprint");
 //            editor.apply();
             Intent authenticationSuccess = new Intent(FingerprintScanActivity.this, FingerprintConfirmActivity.class);
-            if(type.equals("1"))
-            {
+            if (type.equals("1")) {
                 authenticationSuccess.putExtra("TYPE", type);
+            }else{
+                authenticationSuccess.putExtra("TYPE", "2");
             }
             startActivity(authenticationSuccess);
             finish();
