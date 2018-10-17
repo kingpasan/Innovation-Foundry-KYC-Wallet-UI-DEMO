@@ -9,8 +9,7 @@ import android.widget.Button;
 
 public class DashBoaradActivity extends AppCompatActivity {
 
-    Button settings;
-    Button test;
+    private Button btnProfile,btnScore,settings;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -18,6 +17,23 @@ public class DashBoaradActivity extends AppCompatActivity {
         setContentView(R.layout.dashboard);
 
         init();
+
+
+        btnProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DashBoaradActivity.this, ProfileActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnScore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DashBoaradActivity.this, ScoreViewActivity.class);
+                startActivity(intent);
+            }
+        });
 
         settings.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,17 +43,13 @@ public class DashBoaradActivity extends AppCompatActivity {
             }
         });
 
-        test.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(DashBoaradActivity.this, AppCompatPreferenceActivity.class);
-                startActivity(intent);
-            }
-        });
+
     }
 
-    public void init(){
+
+    private void init() {
+        btnProfile = (Button) findViewById(R.id.btnProfile);
+        btnScore = (Button) findViewById(R.id.btnScore);
         settings = (Button)findViewById(R.id.btn_dashboard);
-        test = (Button)findViewById(R.id.button30);
     }
 }

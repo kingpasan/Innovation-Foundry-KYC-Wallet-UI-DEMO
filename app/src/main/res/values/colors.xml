@@ -3,7 +3,8 @@
     <color name="colorPrimary">#d32f2f</color>
     <color name="colorPrimaryDark">#9a0007</color>
     <color name="colorAccent">#ff6659</color>
-    <color name="darkRed">#460105</color>
+    <color name="darkRed">#630800</color>
+
 
     <color name="screen_1">#f44336</color>
     <color name="screen_2">#e91e63</color>
@@ -11,7 +12,9 @@
 
     <color name="c_white">#ffffff</color>
     <color name="c_Black">#000000</color>
-    
+
+    <color name="fingerprint_background">#707070</color>
+
     <array name="dot_active">
         <item>@color/c_Black</item>
         <item>@color/c_Black</item>

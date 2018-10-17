@@ -56,7 +56,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-        android:fontFamily="@font/allerta_stencil"
+        android:fontFamily="sans-serif"
         android:text="DASHBOARD"
         android:textColor="@android:color/darker_gray"
         android:textSize="18sp"
@@ -64,7 +64,7 @@
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="327dp"
+        android:layout_height="match_parent"
         android:layout_below="@+id/view2"
         android:bottomLeftRadius="20dp"
         android:bottomRightRadius="20dp"
@@ -85,7 +85,7 @@
                 android:gravity="center_horizontal">
 
                 <Button
-                    android:id="@+id/button28"
+                    android:id="@+id/btnProfile"
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
                     android:layout_below="@+id/view2"
@@ -106,10 +106,10 @@
                     android:background="@drawable/dashboard_button"
                     android:drawableTop="@drawable/barcode_scan_icon"
                     android:paddingTop="15dp"
-                    android:text="Scan QR" />
+                    android:text="QR Gen" />
 
                 <Button
-                    android:id="@+id/button26"
+                    android:id="@+id/btnScore"
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
                     android:layout_below="@+id/view2"
@@ -150,7 +150,7 @@
                     android:background="@drawable/dashboard_button"
                     android:drawableTop="@drawable/barcode_scan_icon"
                     android:paddingTop="15dp"
-                    android:text="icon" />
+                    android:text="org" />
 
                 <Button
                     android:id="@+id/button31"
@@ -162,7 +162,7 @@
                     android:background="@drawable/dashboard_button"
                     android:drawableTop="@drawable/barcode_scan_icon"
                     android:paddingTop="15dp"
-                    android:text="icon" />
+                    android:text="certificate" />
             </TableRow>
 
             <TableRow

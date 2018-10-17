@@ -29,7 +29,7 @@ public class PasscodeActivity extends AppCompatActivity {
         passcodeView.setListener(new PasscodeView.PasscodeViewListener() {
             @Override
             public void onFail() {
-                Toast.makeText(getApplication(), "Passcode Registration Failed.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplication(),"Passcode Registration Failed.",Toast.LENGTH_SHORT).show();
             }
 
             @Override
