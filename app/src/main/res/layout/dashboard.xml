@@ -97,7 +97,7 @@
                     android:text="Profile" />
 
                 <Button
-                    android:id="@+id/button27"
+                    android:id="@+id/gena_qr"
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
                     android:layout_below="@+id/view2"
@@ -153,7 +153,7 @@
                     android:text="org" />
 
                 <Button
-                    android:id="@+id/button31"
+                    android:id="@+id/certi_view"
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
                     android:layout_below="@+id/view2"

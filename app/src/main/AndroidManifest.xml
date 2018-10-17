@@ -4,6 +4,7 @@
     package="lk.dialog.kyc.kycwallet">
 
     <uses-sdk tools:overrideLibrary="com.kevalpatel2106.fingerprintdialog" />
+
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -64,18 +65,17 @@
         <activity
             android:name=".PasscodeActivity"
             android:theme="@style/AppTheme.Fullscreen" />
-        <activity android:name=".PasscodeLoginActivity"
+        <activity
+            android:name=".PasscodeLoginActivity"
             android:theme="@style/AppTheme.Fullscreen" />
         <activity
             android:name=".QRViewActivity"
             android:theme="@style/AppTheme.Fullscreen" />
-        <activity android:name=".CertificateViewActivity">
-        </activity>
+        <activity android:name=".CertificateViewActivity"></activity>
         <activity
             android:name=".ProfileActivity"
-            android:theme="@style/AppTheme.Fullscreen"></activity>
-        <activity
-            android:name=".ScoreViewActivity"></activity>
+            android:theme="@style/AppTheme.Fullscreen" />
+        <activity android:name=".ScoreViewActivity" />
         <activity
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings" />
@@ -94,7 +94,7 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
-        <activity android:name=".PhotoConfirmActivity"></activity>
+        <activity android:name=".PhotoConfirmActivity" />
     </application>
 
 </manifest>

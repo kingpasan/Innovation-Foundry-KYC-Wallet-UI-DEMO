@@ -31,14 +31,13 @@ public class SplashActivity extends AppCompatActivity {
                      intent = new Intent(SplashActivity.this, PasscodeActivity.class);
                 }
         }else{
+            intent = new Intent(SplashActivity.this, HomeActivity.class);
         }
 
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                intent = new Intent(SplashActivity.this, HomeActivity.class);
-
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
                     overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                     finish();
