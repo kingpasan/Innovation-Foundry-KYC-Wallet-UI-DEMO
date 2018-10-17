@@ -1,19 +1,17 @@
 package lk.dialog.kyc.kycwallet;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
 
 import com.hanks.passcodeview.PasscodeView;
 
 public class PasscodeActivity extends AppCompatActivity {
-
-    Button confirm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,21 +29,22 @@ public class PasscodeActivity extends AppCompatActivity {
         passcodeView.setListener(new PasscodeView.PasscodeViewListener() {
             @Override
             public void onFail() {
-                Toast.makeText(getApplication(),"Passcode Registration Failed.",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplication(), "Passcode Registration Failed.", Toast.LENGTH_SHORT).show();
             }
 
             @Override
-            public void onSuccess(String number) {
-                Toast.makeText(getApplication(),"Passcode Registered Successfully.",Toast.LENGTH_SHORT).show();
-                onBackPressed();
+            public void onSuccess(String passcode) {
+                Toast.makeText(getApplication(), "Passcode Registered Successfully.", Toast.LENGTH_SHORT).show();
+
+                SharedPreferences.Editor editor = getSharedPreferences("Registration", MODE_PRIVATE).edit();
+                editor.putString("AuthMethod", "passcode");
+                editor.putString("Passcode", passcode);
+                editor.apply();
+
+                Intent intent = new Intent(PasscodeActivity.this, PersonActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
-
     }
 }
-
-
-
-
-
-
