@@ -4,7 +4,6 @@
     package="lk.dialog.kyc.kycwallet">
 
     <uses-sdk tools:overrideLibrary="com.kevalpatel2106.fingerprintdialog" />
-
     <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
