@@ -128,7 +128,7 @@
                 android:gravity="center_horizontal">
 
                 <Button
-                    android:id="@+id/button29"
+                    android:id="@+id/btn_dashboard"
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
                     android:layout_below="@+id/view2"

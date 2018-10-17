@@ -2,6 +2,7 @@ package lk.dialog.kyc.kycwallet;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Handler;
 import android.os.VibrationEffect;
@@ -66,7 +67,7 @@ public class FingerprintScanActivity extends AppCompatActivity implements Authen
             quickVibrate();
             Toast.makeText(FingerprintScanActivity.this,
                     "Authentication Error. Please Try Again.!", Toast.LENGTH_LONG).show();
-            Intent authenticationError = new Intent(FingerprintScanActivity.this, PasscodeActivity.class);
+            Intent authenticationError = new Intent(FingerprintScanActivity.this, HomeActivity.class);
             startActivity(authenticationError);
             finish();
         }
@@ -79,7 +80,7 @@ public class FingerprintScanActivity extends AppCompatActivity implements Authen
         public void authenticationCanceledByUser() {
             Toast.makeText(FingerprintScanActivity.this,
                     "Canceled By User.", Toast.LENGTH_LONG).show();
-            Intent authenticationCancel = new Intent(FingerprintScanActivity.this, PasscodeActivity.class);
+            Intent authenticationCancel = new Intent(FingerprintScanActivity.this, HomeActivity.class);
             startActivity(authenticationCancel);
             finish();
         }
@@ -88,6 +89,11 @@ public class FingerprintScanActivity extends AppCompatActivity implements Authen
         public void onAuthenticationSucceeded() {
             Toast.makeText(FingerprintScanActivity.this,
                     "Authentication Successful. Next time You can use Your Fingerprint to Sign in.", Toast.LENGTH_LONG).show();
+
+            SharedPreferences.Editor editor = getSharedPreferences("Registration", MODE_PRIVATE).edit();
+            editor.putString("AuthMethod", "fingerprint");
+            editor.apply();
+
             Intent authenticationSuccess = new Intent(FingerprintScanActivity.this, FingerprintConfirmActivity.class);
             startActivity(authenticationSuccess);
             finish();
