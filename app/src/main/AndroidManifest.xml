@@ -33,8 +33,6 @@
             android:name=".HomeActivity"
             android:theme="@style/AppTheme.Fullscreen" />
         <activity
-            android:name=".SettingsActivity"/>
-        <activity
             android:name=".DashBoaradActivity"
             android:theme="@style/AppTheme.Fullscreen" />
         <activity
@@ -66,7 +64,7 @@
         <activity
             android:name=".PasscodeActivity"
             android:theme="@style/AppTheme.Fullscreen" />
-        <activity android:name=".PasscodeLoginActivity" />
+        <activity android:name=".PasscodeLoginActivity"
             android:theme="@style/AppTheme.Fullscreen" />
         <activity
             android:name=".QRViewActivity"
@@ -77,8 +75,8 @@
             android:name=".ProfileActivity"
             android:theme="@style/AppTheme.Fullscreen"></activity>
         <activity
-            android:name=".ScoreViewActivity"
-            android:theme="@style/AppTheme.Fullscreen"></activity>
+            android:name=".ScoreViewActivity"></activity>
+        <activity
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings" />
         <activity android:name=".FingerprintLoginActivity" />
