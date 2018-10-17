@@ -27,7 +27,7 @@ public class NumberVerifyActivity extends AppCompatActivity {
         btnVerify.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(NumberVerifyActivity.this, DashBoaradActivity.class);
+                Intent intent = new Intent(NumberVerifyActivity.this, PhotoCaptureActivity.class);
                 startActivity(intent);
             }
         });

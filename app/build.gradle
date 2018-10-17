@@ -31,4 +31,5 @@ dependencies {
     implementation 'com.android.support:design:28.0.0'
     implementation 'com.kevalpatel2106:fingerprint-dialog-compat:1.0'
     api 'com.hanks:passcodeview:0.1.2'
+    implementation 'com.karumi:dexter:4.2.0'
 }
