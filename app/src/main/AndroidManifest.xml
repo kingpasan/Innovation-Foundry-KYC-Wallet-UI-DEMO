@@ -60,6 +60,9 @@
         <activity
             android:name=".ProfileActivity"
             android:theme="@style/AppTheme.Fullscreen"></activity>
+        <activity
+            android:name=".ScoreViewActivity"
+            android:theme="@style/AppTheme.Fullscreen"></activity>
     </application>
 
 </manifest>
