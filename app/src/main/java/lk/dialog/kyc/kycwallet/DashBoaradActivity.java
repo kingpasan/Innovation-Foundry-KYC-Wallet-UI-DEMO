@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class DashBoaradActivity extends AppCompatActivity {
 
-    private Button btnProfile,btnScore;
+    private Button btnProfile,btnScore,settings;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -35,11 +35,21 @@ public class DashBoaradActivity extends AppCompatActivity {
             }
         });
 
+        settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DashBoaradActivity.this, SettingsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 
 
     private void init() {
         btnProfile = (Button) findViewById(R.id.btnProfile);
         btnScore = (Button) findViewById(R.id.btnScore);
+        settings = (Button)findViewById(R.id.btn_settings);
     }
 }

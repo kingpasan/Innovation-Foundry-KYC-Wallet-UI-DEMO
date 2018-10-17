@@ -3,6 +3,7 @@ package lk.dialog.kyc.kycwallet;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Handler;
+import android.support.v4.content.IntentCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -30,12 +31,14 @@ public class SplashActivity extends AppCompatActivity {
                      intent = new Intent(SplashActivity.this, PasscodeActivity.class);
                 }
         }else{
-            intent = new Intent(SplashActivity.this, HomeActivity.class);
         }
 
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
+                intent = new Intent(SplashActivity.this, HomeActivity.class);
+
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
                     overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                     finish();
