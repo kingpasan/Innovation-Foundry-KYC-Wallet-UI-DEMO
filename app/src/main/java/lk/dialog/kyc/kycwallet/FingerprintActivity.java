@@ -86,6 +86,7 @@ public class FingerprintActivity extends AppCompatActivity implements Authentica
             Toast.makeText(FingerprintActivity.this,
                     "Authentication Successful. Next time You can use Your Fingerprint to Sign in.", Toast.LENGTH_LONG).show();
             Intent authenticationSuccess = new Intent(FingerprintActivity.this, FingerprintConfirmActivity.class);
+            authenticationSuccess.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(authenticationSuccess);
             finish();
         }

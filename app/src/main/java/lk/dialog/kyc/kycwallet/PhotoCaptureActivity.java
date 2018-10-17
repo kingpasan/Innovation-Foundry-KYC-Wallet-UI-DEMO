@@ -194,6 +194,7 @@ public class PhotoCaptureActivity extends AppCompatActivity {
                 // successfully captured the image
                 // display it in image view
                Intent intent = new Intent(PhotoCaptureActivity.this, PhotoConfirmActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                startActivity(intent);
                finish();
             } else if (resultCode == RESULT_CANCELED) {

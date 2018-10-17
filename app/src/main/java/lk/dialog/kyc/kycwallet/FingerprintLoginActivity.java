@@ -92,6 +92,7 @@ public class FingerprintLoginActivity extends AppCompatActivity implements Authe
                     "Authentication Successful.", Toast.LENGTH_LONG).show();
 
             Intent authenticationSuccess = new Intent(FingerprintLoginActivity.this, DashBoaradActivity.class);
+            authenticationSuccess.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(authenticationSuccess);
             finish();
         }
